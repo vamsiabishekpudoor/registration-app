@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Form } from "../types/form";
+import Link from 'next/link';
+
 
 export default function FormsList() {
   const router = useRouter();
@@ -19,9 +21,9 @@ export default function FormsList() {
       {forms.length === 0 ? (
         <p className="text-gray-600">
           No forms created yet.{" "}
-          <a href="/" className="text-blue-500 hover:underline">
+          <Link href="/" className="text-blue-500 hover:underline">
             Create one now
-          </a>
+          </Link>
           .
         </p>
       ) : (

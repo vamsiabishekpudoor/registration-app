@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
-import { Form, FormField } from './types/form';
+import { FieldType, Form, FormField } from './types/form';
 
 export default function Home() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function Home() {
     if (key === 'options') {
       newFields[index][key] = value.split(',').map((opt) => opt.trim());
     } else {
-      newFields[index][key] = value as any;
+      newFields[index][key] = value as FieldType;
     }
     setFields(newFields);
   };

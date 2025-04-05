@@ -1,13 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import FormField from '../../forms/FormField';
 import { Form, Submission } from '../../types/form';
 
 export default function Register() {
   const params = useParams();
-  const router = useRouter();
   const { formId } = params;
   const [form, setForm] = useState<Form | null>(null);
   const [formData, setFormData] = useState<Record<string, string | string[] | boolean>>({});

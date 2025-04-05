@@ -1,6 +1,8 @@
+
+export type FieldType = 'text' | 'textarea' | 'radio' | 'checkbox' | 'dropdown';
 export interface FormField {
     name: string;
-    type: 'text' | 'textarea' | 'radio' | 'checkbox' | 'dropdown';
+    type: FieldType;
     options?: string[]; // For radio, dropdown and checkbox
   }
   
